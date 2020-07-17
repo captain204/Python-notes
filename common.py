@@ -103,4 +103,26 @@ def factorial(i):
     return i * factorial(i-1)
 
 
-print(factorial(5))
+#print(factorial(5))
+
+"""Using recursion to get  the fibbonaci sequence of a number."""
+
+def fibbonaci(n):
+    if n <=1:
+        return n
+    return fibbonaci(n-1) + fibbonaci(n-2)
+
+print(fibbonaci(4))
+
+"""Binary search using recursion"""
+
+def BinarySearchRecursive(arr,low,high,value,mid=0):
+    mid = low + (high-low) // 2
+    if arr[mid] == value:
+        return True
+    elif arr[mid] < value:
+        return BinarySearchRecursive(arr,low,mid + 1, high, value)
+    else:
+        return BinarySearchRecursive(arr, low, mid - 1, high, value)
+
+print(BinarySearchRecursive([2,4,6,8,10,12,14],0,4,13))
