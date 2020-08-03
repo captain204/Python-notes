@@ -61,7 +61,7 @@ def maxima(arr):
         return max
     i += 1
 
-print(maxima([2,5,1,7,4,1]))
+#print(maxima([2,5,1,7,4,1]))
 
 
 
@@ -133,6 +133,8 @@ def duplicate_check(arr):
         return "List contain no duplicates "
 
 
+
+
 """Find the duplicate elements in a list of size n where each element is in the range 0 to n-1"""
 def duplicate(arr):
     size = len(arr)
@@ -144,7 +146,43 @@ def duplicate(arr):
                 repeated.append(arr[i])
     return repeated
 
-print(duplicate([2,5,1,7,4,1,2,4,7]))
+#print(duplicate([2,5,1,7,4,1,2,4,7,5]))
 
 
+"""Find the maximum elements in a list"""
+def max_value(arr):
+    return max(arr)
+
+#print(max_value([2,4,6,21,10]))
+
+
+"""Given a list with 'n' elements a value 'X', find two elements in the list that sums to  'X'"""
+def sum_value(x,arr):
+    size = len(arr)
+    result = []
+    for i in range(size):
+        k = i + 1
+        for j in range(k,size):
+            if arr[i] + arr[j] == x:
+                result.append(arr[i])
+                result.append(arr[j])
+
+    return result
+
+
+#print(sum_value(34,[3,4,7,9,23,11,0]))
+
+
+"""Write a method to find the sum of every number in an int number
+   Example input=1984, output should be 32(1+9+8+4)
+"""
+def sum_int(number):
+   sum = 0
+   i = 0
+   value = list(str(number))
+   while i < len(value):
+       sum += int(value[i])
+       i += 1
+   return value
+print(sum_int(1984))
 
