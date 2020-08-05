@@ -77,6 +77,7 @@ def alternate(arr):
 def segregate(arr):
     right = []
     left = []
+
     for value in arr:
         if value < 1:
             left.append(value)
